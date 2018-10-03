@@ -1,12 +1,43 @@
---- Sentencias SQL para la creación del esquema de parranderos
---- Las tablas tienen prefijo A_ para facilitar su acceso desde SQL Developer
+--- Elimina las tablas de la base de datos.
+DROP TABLE "User" CASCADE CONSTRAINTS;
+DROP TABLE "Empresa" CASCADE CONSTRAINTS;
+DROP TABLE "Persona" CASCADE CONSTRAINTS;
+DROP TABLE "Sucursal" CASCADE CONSTRAINTS;
+DROP TABLE "ProveedorSucursal" CASCADE CONSTRAINTS;
+DROP TABLE "Ciudad" CASCADE CONSTRAINTS;
+DROP TABLE "ProductoAbstracto" CASCADE CONSTRAINTS;
+DROP TABLE "OfrecidoSucursal" CASCADE CONSTRAINTS;
+DROP TABLE "OfrecidoProveedor" CASCADE CONSTRAINTS; 
+DROP TABLE "ProductoFisico" CASCADE CONSTRAINTS;
+DROP TABLE "Categoria" CASCADE CONSTRAINTS;
+DROP TABLE "Contenedor" CASCADE CONSTRAINTS;
+DROP TABLE "Pedido" CASCADE CONSTRAINTS;
+DROP TABLE "ProductoPedido" CASCADE CONSTRAINTS;
+DROP TABLE "Promocion" CASCADE CONSTRAINTS;
+DROP TABLE "PromocionPorCantidadOUnidad" CASCADE CONSTRAINTS;
+DROP TABLE "PromocionPorcentajeDescuento" CASCADE CONSTRAINTS;
+DROP TABLE "PromocionPaqueteProductos" CASCADE CONSTRAINTS;
+DROP TABLE "Factura" CASCADE CONSTRAINTS;
+DROP TABLE "ItemFactura" CASCADE CONSTRAINTS;
 
--- USO
--- Copie el contenido deseado de este archivo en una pestaña SQL de SQL Developer
--- Ejecútelo como un script - Utilice el botón correspondiente de la pestaña utilizada
-    
--- Eliminar todas las tablas de la base de datos
-
-
--- Eliminar el contenido de todas las tablas de la base de datos
--- El orden es importante. Por qué?
+--Eliminar el contenido de todas las tablas.
+delete from ItemFactura;
+delete from Factura;
+delete from PromocionPaqueteProductos;
+delete from PromocionPorcentajeDescuento;
+delete from PromocionPorCantidadOUnidad;
+delete from Promocion;
+delete from ProductoPedido;
+delete from Pedido;
+delete from Contenedor;
+delete from ProductoFisico;
+delete from OfrecidoProveedor;
+delete from OfresidoSucursal;
+delete from ProductoAbstracto;
+delete from Categoria;
+delete from ProveedorSucursal;
+delete from Sucursal;
+delete from Ciudad;
+delete from Persona;
+delete from Empresa;
+delete from User;
